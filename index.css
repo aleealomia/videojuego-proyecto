@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap');
-
 
 /Globales/
 *,
@@ -10,11 +8,13 @@
     box-sizing: border-box;
 }
 
+
+
 html {
-    font-family: 'Poppins', sans-serif;
     font-size: 10px;
     color: #000;
     scroll-behavior: smooth;
+    font-family: 'Prompt', sans-serif;
 }
 
 body {
@@ -71,6 +71,11 @@ header {
     right: 2.5rem;
     cursor: pointer;
     z-index: 1500;
+}
+
+.imagenlogo {
+    height: 200px;
+    width: 200px;
 }
 
 .fa-times {
@@ -163,8 +168,7 @@ header {
 
 .h2-sub {
     font-size: 3rem;
-    font-family: 'Poppins', sans-serif;
-    color: #3bcc75;
+    color: rgb(199, 194, 194);
     font-weight: 600;
     line-height: .4;
 }
@@ -175,9 +179,9 @@ header {
 }
 
 .head {
-    color: #fff;
+    margin-top: -2vh;
+    color: #f1f1f1;
     font-size: 3.7rem;
-    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: .5rem;
@@ -191,9 +195,8 @@ header {
 
 .he-des h5 {
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 100;
-    text-transform: uppercase;
     margin-bottom: 1.2rem;
     letter-spacing: 3px;
     margin-right: -3px;
@@ -202,21 +205,23 @@ header {
 .btn {
     display: inline-block;
     text-transform: uppercase;
+    font-weight: 600;
     letter-spacing: 2px;
     margin-right: -2px;
 }
 
 .cta-btn {
-    font-size: 1.1rem;
-    background-color: #ffc845;
-    padding: 1.5rem 3rem;
-    color: #fff;
+    margin-top: 3vh;
+    font-size: 1.5rem;
+    background-color: rgb(78, 76, 76);
+    padding: 1.2rem 2rem;
+    color: white;
     border-radius: .4rem;
 }
 .cta-btn:hover,
 .cta-btn:focus {
     color: #fff;
-    background-color: #3bcc75;
+    background-color: #111211;
 }
 
 
@@ -326,15 +331,17 @@ footer {
 }
 
 .social-icons {
+    margin-top: 10vh;
     list-style: none;
     margin-bottom: 5.4rem;
+    margin-left: 40vh;
     display: flex;
     justify-content: center;
 }
 
 .social-icons i {
     font-size: 2rem;
-    color: #3bcc75;
+    color: rgb(9, 9, 9);
     padding: .8rem 2rem;
     
 }
@@ -345,15 +352,22 @@ footer {
 }
 
 .news-form {
-    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
+    padding-left: 6vh;
+}
 
+.comentarios {
+    font-size: 20px;
+    padding-left: 7vh;
+    margin-top: -23vh;
+    color: black;
 }
 
 .news-input {
     width: 100%;
+    background-color: rgb(170, 173, 229);
     max-width: 25rem;
     padding: 1rem;
     border-radius: .4rem;
@@ -361,13 +375,13 @@ footer {
 .news-btn {
     background: transparent;
     border: none;
-    color: #252525;
+    color: #070707;
     cursor: pointer;
     font-size: 1.6rem;
     padding: 1px .6rem;
     position: absolute;
     top: 30%;
-    margin-left: 20.5rem;
+    margin-left: 30.5rem;
 }
 
 @media screen and (min-width: 900px) {
@@ -505,4 +519,251 @@ footer {
     font-weight: 300;
     font-size: 25px;
     margin-bottom: 10px;
+}
+
+.boton-modal {
+    padding: 40px;
+}
+
+.boton-modal label {
+    padding: 10px 15px;
+    background-color: rgb(184, 183, 183);
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.boton-modal label:hover{
+    background-color: rgb(126, 126, 126);;
+}
+
+#btn-modal{
+    display: none;
+}
+
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#btn-modal:checked ~ .container-modal {
+    display: flex;
+}
+.content-modal{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.content-modal h2{
+    margin-bottom: 15px;
+}
+
+.content-modal p{
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.content-modal .btn-cerrar{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-modal .btn-cerrar label {
+    padding: 7px 10px;
+    background-color: rgb(184, 183, 183);
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.content-modal .btn-cerrar label:hover{
+    background-color: rgb(123, 123, 123);;
+}
+
+.cerrar-modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+}
+
+
+
+.boton-modal1 {
+    padding: 20px;
+}
+
+.boton-modal1 label {
+    padding: 10px 15px;
+    background-color: rgb(184, 183, 183);
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.boton-modal1 label:hover{
+    background-color: rgb(126, 126, 126);;
+}
+
+#btn-modal1{
+    display: none;
+}
+
+.container-modal1{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#btn-modal1:checked ~ .container-modal1 {
+    display: flex;
+}
+.content-modal1{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.content-modal1 h2{
+    margin-bottom: 15px;
+}
+
+.content-modal1 p{
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.content-modal1 .btn-cerrar1{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-modal1 .btn-cerrar1 label {
+    padding: 7px 10px;
+    background-color: rgb(184, 183, 183);
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.content-modal1 .btn-cerrar1 label:hover{
+    background-color: rgb(123, 123, 123);;
+}
+
+.cerrar-modal1 {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+}
+
+
+
+.boton-modal2 {
+    padding: 20px;
+}
+
+.boton-modal2 label {
+    padding: 10px 15px;
+    background-color: rgb(184, 183, 183);
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.boton-modal2 label:hover{
+    background-color: rgb(126, 126, 126);;
+}
+
+#btn-modal2{
+    display: none;
+}
+
+.container-modal2{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#btn-modal2:checked ~ .container-modal2 {
+    display: flex;
+}
+.content-modal2{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.content-modal2 h2{
+    margin-bottom: 15px;
+}
+
+.content-modal2 p{
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.content-modal2 .btn-cerrar2{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-modal2 .btn-cerrar2 label {
+    padding: 7px 10px;
+    background-color: rgb(184, 183, 183);
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.content-modal2 .btn-cerrar2 label:hover{
+    background-color: rgb(123, 123, 123);;
+}
+
+.cerrar-modal2 {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
 }
