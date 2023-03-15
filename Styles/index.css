@@ -1,5 +1,5 @@
 
-/Globales/
+/*Globales*/
 *,
 *::before,
 *::after {
@@ -46,7 +46,7 @@ p {
     padding: 0 2.4rem;
 }
 
-/Header/
+/*Header*/
 header {
     width: 100%;
     position: absolute;
@@ -153,7 +153,7 @@ header {
     color: #3bcc75;
 }
 
-/Hero/
+/*Hero*/
 
 
 .hero {
@@ -264,7 +264,7 @@ header {
 }
 
 
-/menu/
+/*menu*/
 
 .taste {
     background: url("../images/taste.jpg") center no-repeat;
@@ -278,7 +278,7 @@ header {
 }
 
 
-/platillos/
+/*platillos*/
 
 .image-group {
     display: grid;
@@ -297,7 +297,7 @@ header {
 }
 
 
-/footer/
+/*footer*/
 footer {
     padding: 7.9rem 0;
     background-color: #121212;
