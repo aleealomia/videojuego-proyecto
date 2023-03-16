@@ -99,8 +99,6 @@ body {
 }
 
 .game-over{
-    display: none;
-
     position: absolute;
     width: 100%;
 
@@ -126,7 +124,8 @@ body {
     </style>
 </head>
 <body>
-    <div class="contenedor">
+    <div class="contenedor" onclick="Init(),hizoClickParaEmpezar(), Saltar()">
+        <div class="game-over">Haz click para empezar</div>
         <div class="suelo"></div>
 
         <div class="dino dino-corriendo"></div>
@@ -142,7 +141,7 @@ var deltaTime = 0;
 if (document.readyState === "complete" || document.readyState === "interactive"){
 
 }else{
-    document.addEventListener("DOMContentLoaded", Init);
+    
 
 }
 
@@ -195,14 +194,7 @@ function Start() {
     contenedor = document.querySelector (".contenedor");
     textoScore = document.querySelector (".score");
     dino = document.querySelector (".dino");
-    document.addEventListener("keydown", HandleKeyDown);
 
-}
-
-function HandleKeyDown(ev) {
-    if (ev.keycode == 32){
-        Saltar();
-    }
 }
 
 function Saltar() {
@@ -222,8 +214,6 @@ function Update() {
     DecidirCrearObstaculos();
     MoverObstaculos();
     DetectarColision();
-
-
     velY -= gravedad * deltaTime;
 }
 
@@ -337,7 +327,12 @@ function Estrellarse() {
     dino.classList.remove("dino-corriendo");
     dino.classList.add("dino-estrellado");
     parado = true;
+    var gm = document.querySelector(".game-over");
+    gm.innerText = "Perdiste";
 } 
+function hizoClickParaEmpezar() {
+    document.querySelector(".game-over").style.display= "none";
+}
 
 
 </script>
