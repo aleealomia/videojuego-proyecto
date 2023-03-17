@@ -384,6 +384,23 @@ footer {
     margin-left: 30.5rem;
 }
 
+.mision-vision {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0 32px;
+}
+.mision-titulo, .vision-titulo {
+    color:white;
+    font-size:40px;
+    text-align: center;
+}
+.mision, .vision {
+    width: 45%;
+}
+.mision-texto, .vision-texto{
+    
+}
 @media screen and (min-width: 900px) {
 
     section {
