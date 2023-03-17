@@ -390,7 +390,6 @@ footer {
     display: flex;
     width: 100%;
     justify-content: center;
-    padding: 0 32px;
 }
 .mision-titulo, .vision-titulo {
     color:white;
@@ -399,10 +398,35 @@ footer {
 }
 .mision, .vision {
     width: 100%;
+    opacity: 0.5;
+}
+.mision {
+    background-image: url("../imagenes/Mision.jfif");
+}
+@keyframes aparecer {
+    from {
+        opacity: 0.5;
+        width: 100%;
+    } to {
+        opacity: 1;
+        width: 150%;
+    }
+}
+.mision:hover {
+    animation: aparecer 1s;
+    animation-fill-mode: both;
+}
+.vision:hover {
+    animation: aparecer 1s;
+    animation-fill-mode:both;
+}
+.vision {
+    background-image: url("../imagenes/vision.jfif");
 }
 .mision-texto, .vision-texto{
     padding: 0 32px;
     text-align: justify;
+    color:white;
 }
 @media screen and (min-width: 900px) {
 
