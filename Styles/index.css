@@ -9,7 +9,9 @@
 }
 
 
-
+.rosita {
+    color:rgb(224, 189, 220);
+}
 html {
     font-size: 10px;
     color: #000;
@@ -19,6 +21,7 @@ html {
 
 body {
     overflow-x: hidden;
+    background-image: url();
 }
 
 section {
@@ -179,7 +182,6 @@ header {
 
 .head {
     margin-top: -2vh;
-    color: #f1f1f1;
     font-size: 3.7rem;
     text-transform: uppercase;
     font-weight: 900;
@@ -396,7 +398,7 @@ footer {
     text-align: center;
 }
 .mision, .vision {
-    width: 45%;
+    width: 100%;
 }
 .mision-texto, .vision-texto{
     padding: 0 32px;
