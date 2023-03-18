@@ -12,18 +12,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Styles/index.css">
+    <script src="http:kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
 
 <body style="background-image: url(imagenes/imagen\ fondo.png); background-size:cover;">
-    
-    <header >
-        <div class="container" style="margin-bottom:5rem">
+
+    <header>
+        <div class="container">
             <nav class="nav">
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
                     <i class="fas fa-times"></i>
                 </div>
-                <a href="index.html"><img src="imagenes/logobien.png" alt="" class="imagenlogo"></a>
+                <a href="index.html"><img src="imagenes/image.png" alt="" class="imagenlogo"></a>
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="index.html" class="nav-link">Inicio</a>
@@ -32,44 +33,77 @@
                         <a href="sobrenosotres.html" class="nav-link ">Sobre nosotras</a>
                     </li>
                     <li class="nav-item">
-                        <a href="servicios.html" class="nav-link">Servicios</a>
+                        <a href="contacto.html" class="nav-link active">Contáctanos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contacto.html" class="nav-link active">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="dinoworld.html" class="nav-link">Dino world</a>
+                        <a href="dinoworld.html" class="nav-link">Astro world</a>
                     </li>
                 </ul>
             </nav>
-        </div>
-    </header>
-    <section>
-        <div class="container" style="display:flex; flex-flow:column; margin-top: 5rem;">
-            <div class="res-info">
-                <div class="res-des">
-                </div class="global">
-                <h2 class="h2-sub">
-                    <span class="fil">E</span>ncuentranos
-                </h2>
-                <h1 class="head rosita">Redes sociales</h1>
-                <div class="circle">
-                    <i class="fas fa-circle"></i>
+            <div class="container" style="display:flex; flex-flow:column; margin-top: 5rem;">
+                <div class="res-info">
+                    <div class="res-des">
+                    </div class="global">
+                    <h2 class="h2-sub">
+                        <span class="fil">E</span>ncuentranos
+                    </h2>
+                    <h1 class="head rosita">Redes sociales</h1>
+                    <div class="circle">
+                        <i class="fas fa-circle"></i>
+                    </div>
                 </div>
-            </div>
-            <p style="margin-top:2rem;" class="rosita">
-                Tenemos redes sociales como: <a href="#" style="text-decoration: underline;">instagram</a>, <a href="#"
-                    style="text-decoration: underline;">facebook</a>, <a href="#"
-                    style="text-decoration: underline;">twitter</a> y <a href="#"
-                    style="text-decoration: underline;">pinterest</a>, asegurate de visitar
-                todas para no perderte de ninguna actualizacion que podamos hacer en un futuro
-            </p>
-            <div style="display: flex; justify-content: center;">
-                <a href="contacto.html" class="btn cta-btn" style="max-width: 30rem;">Pide informacion</a>
-            </div>
-        </div>
+                <p style="margin-top:2rem;" class="rosita">
+                    Tenemos redes sociales como: <a href="https://www.instagram.com/aax_games/" style="text-decoration: underline;">instagram</a>, <a href="https://www.facebook.com/profile.php?id=100090900945151"
+                        style="text-decoration: underline;">facebook</a>, <a href="https://twitter.com/AAXGAMESS"
+                        style="text-decoration: underline;">twitter</a> y <a href="https://pin.it/7nhVOyT"
+                        style="text-decoration: underline;">pinterest</a>, asegurate de visitar
+                    todas para no perderte de ninguna actualizacion que podamos hacer en un futuro
+                </p>
+                <header>
+                    <body>
+                        <div class="container-form">
+                            <div class="info-form">
+                                <h2>contactanos</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus voluptatibus reiciendis doloribus! Commodi rem repellendus odio vel modi optio voluptates, nihil, molestiae, quia maiores ut illo facere omnis quo beatae?</p>
+                                <a href="#"> <i class="fa fa-phone"></i>981-821-3835</a>
+                                <a href="#"> <i class="fa fa-envelope"></i>alejandra.arjona.0905@gmail.com</a>
+                                <a href="#"> <i class="fa fa-map-marked"></i>Ciudad, Pais</a>
+                            </div>
+                            <form action="#" autocomplete="off">
+                                <input type="text" name="nombre" 
+                                placeholder="Ingresa tu nombre" 
+                                class="campo">
+                                <input type="email" name="email"
+                                placeholder="ingresa tu correo"
+                                class="campo">
+                                <input type="mensaje" name="mensaje"
+                                placeholder="Ingresa tu mensaje"
+                                class="campo">
+                                <input type="submit" name="enviar" value="enviar mensaje" class="btn-enviar">
+                            </form>
+                        </div>
+                    
+                    </body>
+                </header>
+
+                <script>
+
+                    const selectEelement = function (element) {
+                        return document.querySelector(element);
+                    }
+            
+                    let menuToggle = SelectElement('.menu-toggle');
+                    let body = selectElement('body');
+            
+                    menuToggle.addEventListener('click', function () {
+                        body.classList.toggle('open');
+                    })
+            
+            
+                </script>
+
+                
 
         </div>
         </div>
-    </section>
-</body>
+        <section>
