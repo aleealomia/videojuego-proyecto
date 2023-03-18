@@ -339,9 +339,7 @@ footer {
 }
 
 .social-icons {
-    margin-top: 10vh;
     list-style: none;
-    margin-bottom: 5.4rem;
     display: flex;
     justify-content: center;
 }
@@ -367,6 +365,7 @@ footer {
 .comentarios {
     font-size: 20px;
     color: black;
+    text-align: center ;
 }
 
 .news-input {
@@ -516,12 +515,13 @@ footer {
         justify-content: space-between;
     }
 
-    .social-media,
-    .news-form {
-        width: 100%;
-        margin: 0 1rem;
+    .social-media{
+        width: 400px;
+        margin: 0 32px 0 150px;
     }
-
+.news-form {
+    margin: 0 auto;
+}
    .news-btn {
        margin-left: 7.5rem;
    }
@@ -757,7 +757,13 @@ article.card {
     z-index: -1;
 }
 
-
+.uwu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 250px;
+    align-items:center;
+}
 
 .boton-modal2 {
     padding: 20px;
@@ -851,7 +857,7 @@ article.card {
     justify-self: center;
     align-items: center;
     background-color: rgba(0,0,0,0.5);
-    margin-top: 25rem;
+    margin-top: 32px;
 }
 
 #prev , #next {
