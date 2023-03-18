@@ -1,6 +1,6 @@
 var i = 0;
 var arr = ["url('./imagenes/slide1.jfif')","url('./imagenes/slide2.jfif')","url('./imagenes/slide3.jfif')","url('./imagenes/slide4.jfif')","url('./imagenes/slide5.jfif')"];
-var arrtexto = ["imagen1","Imagen2","Imagen3","Imagen4","Imagen5"]
+var arrtexto = ["NOS INSPIRAMOS DEL FAMOSO JUEGO DEL DINOSAURIO DE GOOGLE","FUE CODIFICADO EN HTML Y CSS","EN UN FUTUR SE LE CAMBIARA LA ESTÉTICA","SE LE AGREGARÁN MAS NIVELES","PARA QUE DISFRUTEN"]
 function prevf(){
     
     if (i > 0) {
