@@ -12,13 +12,13 @@ body {
 
 .contenedor {
     width: 920px;
-    height: 280px;
+    height: 360px;
     margin: 0 auto;
 
     position: relative;
 
     overflow: hidden;
-    background: linear-gradient(#B7D6C7, #FFE2D1)
+    background: linear-gradient(#B7D6C7 0%, transparent 60%, transparent 80%, #6d757e 100% #FFE2D1)
     
 
 }
@@ -53,9 +53,10 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 3;
 
     background: url(img\ juego/suelo.png) repeat-x 0px 0px;
-    background-size: 50% 42px;
+    background-size: 48px 258px;
 
 }
 
@@ -76,18 +77,48 @@ body {
 
 }
 
-.cactus {
-    width: 100px;
-    height: 96px;
+.obstaculo{
+    width: 48x;
+    height: 48px;
 
     position: absolute;
     bottom: 16px;
     left: 600px;
     z-index: 1;
 
-    background: url(img\ juego/cactus1.png) no-repeat;
 }
 
+.obstaculo-flotante{
+    bottom: 90px;
+    background: url(img/obstaculo2.png) no-repeat;
+
+}
+
+obstaculo-hundido{
+    bottom: 0px;
+    background: url(img/obstaculo1.png) no-repeat;
+
+}
+
+.nube{
+    width: 92px;
+    height: 26px;
+
+    position: absolute;
+    z-index: 0;
+
+    background: url(img/nube.png) no-repeat;
+    background-size: 92px 26px;
+}
+
+.moneda{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    z-index: 1;
+  
+    background: url(img/moneda.png) no-repeat center center;
+}
 .game-over{
     position: absolute;
     width: 100%;
