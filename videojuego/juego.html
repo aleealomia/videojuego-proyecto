@@ -14,7 +14,7 @@
 
 body{
     height: 100vh;
-    background: #584040;
+    background: #364d62;
     display: flex;
     align-items: center;
 }
@@ -205,6 +205,8 @@ body{
 
 var time = new Date();
 var deltaTime = 0;
+var isGameRunning = false;
+var isGameOver = false;
 
 if(document.readyState === "complete" || document.readyState === "interactive"){
     setTimeout(Init, 1);
@@ -212,17 +214,29 @@ if(document.readyState === "complete" || document.readyState === "interactive"){
     document.addEventListener("DOMContentLoaded", Init); 
 }
 
+document.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        isGameRunning = !isGameRunning
+
+        if (isGameOver) {
+            window.location.reload()
+        }
+    }
+    Loop()
+});
+
 function Init() {
     time = new Date();
     Start();
-    Loop();
 }
 
 function Loop() {
     deltaTime = (new Date() - time) / 1000;
     time = new Date();
-    Update();
-    requestAnimationFrame(Loop);
+    if (isGameRunning) {
+        Update()
+        requestAnimationFrame(Loop);
+    }
 }
 
 //****** GAME LOGIC ********//
@@ -242,7 +256,7 @@ var dinoPosY = nivelDelMar;
 var sueloX = 0;
 var velEscenario = 1280/3;
 var gameVel = 1;
-var score = 0;
+var score = 0; // Esto se debe guardar en localStorage si esta se convierte en la nueva puntuacion mas alta
 
 var parado = false;
 var saltando = false;
@@ -476,6 +490,7 @@ function GameOver() {
     Estrellarse();
     gameOver.style.display = "block";
     audioGameOver.play();
+    isGameOver = true;
 }
 
 function DetectarColision() {
