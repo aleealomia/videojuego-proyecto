@@ -256,7 +256,8 @@ var dinoPosY = nivelDelMar;
 var sueloX = 0;
 var velEscenario = 1280/3;
 var gameVel = 1;
-var score = 0; // Esto se debe guardar en localStorage si esta se convierte en la nueva puntuacion mas alta
+var score = parseInt(localStorage.getItem('score')) || 0; 
+    localStorage.setItem('score', ++score)    
 
 var parado = false;
 var saltando = false;
