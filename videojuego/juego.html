@@ -25,7 +25,7 @@
 
         .mensaje-emergente {
             position: absolute;
-            background-color: #ffffff;
+            background-color: #ffffff00;
             padding: 10px;
             width: 800px;
             height: 500px;
@@ -575,6 +575,14 @@ function GameOver() {
     gameOver.style.display = "block";
     audioGameOver.play();
     isGameOver = true;
+    
+    font = pygame.font.Font(None, 36)
+text = font.render("Presiona ENTER para reiniciar", True, (255, 255, 255))
+
+
+
+
+
 }
 
 function DetectarColision() {
@@ -590,12 +598,15 @@ function DetectarColision() {
                     interactuables[i].parentNode.removeChild(interactuables[i]);
                     interactuables.splice(i, 1);
                 }else{
-                    GameOver();
+                    GameOver ();
+            
                 }
             }
         }
     }
 }
+
+
 
 function IsCollision(a, b, paddingTop, paddingRight, paddingBottom, paddingLeft) {
     var aRect = a.getBoundingClientRect();
@@ -610,6 +621,12 @@ function IsCollision(a, b, paddingTop, paddingRight, paddingBottom, paddingLeft)
 }
 
 
+
+
 </script>
+
+
 </body>
 </html>
+
+
