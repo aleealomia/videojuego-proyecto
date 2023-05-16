@@ -1,10 +1,79 @@
+
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+
+    <style>
+        .cubierta-emergente {
+            background-color: #000;
+            
+            opacity: .5;
+            filter: alpha(opacity=50);
+            position: fixed;
+            top: 30;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+
+        .mensaje-emergente {
+            position: absolute;
+            background-color: #ffffff;
+            padding: 10px;
+            width: 800px;
+            height: 500px;
+            font-size: 2em;
+            z-index: 11;
+            top: 20%;
+            left: 30%;
+            margin-left: -100px;
+            margin-top: -20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        function mostrarCubiertaEmergente() {
+  let divEmergente = document.createElement('div');
+  divEmergente.setAttribute('id', 'divEmergente');
+  divEmergente.setAttribute('class', 'cubierta-emergente');
+  document.body.appendChild(divEmergente);
+
+  let imgMensaje = document.createElement('img');
+  imgMensaje.src = "img/videojuego_instrucciones.png"; // Reemplaza 'ruta_de_la_imagen' con la ruta correcta de la imagen que deseas mostrar
+  imgMensaje.setAttribute('id', 'imgMensaje');
+  imgMensaje.setAttribute('class', 'mensaje-emergente');
+
+  imgMensaje.onclick = removerCubiertaEmergente;
+
+  document.body.appendChild(imgMensaje);
+}
+
+function removerCubiertaEmergente() {
+  let divEmergente = document.getElementById('divEmergente');
+  let imgMensaje = document.getElementById('imgMensaje');
+
+  if (divEmergente && imgMensaje) {
+    divEmergente.parentNode.removeChild(divEmergente);
+    imgMensaje.parentNode.removeChild(imgMensaje);
+  }
+}
+
+
+        window.onload = function() {
+            mostrarCubiertaEmergente();
+        }
+    </script>
+
     <style>
 
 * {
@@ -217,12 +286,18 @@ if(document.readyState === "complete" || document.readyState === "interactive"){
 document.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         isGameRunning = !isGameRunning
+        
+
 
         if (isGameOver) {
             window.location.reload()
+           
         }
+
+        removerCubiertaEmergente();
     }
     Loop()
+
 });
 
 
@@ -496,6 +571,7 @@ function GanarPuntos() {
 
 function GameOver() {
     Estrellarse();
+    
     gameOver.style.display = "block";
     audioGameOver.play();
     isGameOver = true;
