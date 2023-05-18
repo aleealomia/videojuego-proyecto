@@ -279,33 +279,24 @@ var isGameOver = false;
 
 if(document.readyState === "complete" || document.readyState === "interactive"){
     setTimeout(Init, 1);
-}else{
+}
+else{
     document.addEventListener("DOMContentLoaded", Init); 
 }
 
-document.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
+document.addEventListener ("keypress", function(event) {  
+    if (event.key === "Enter") { 
         isGameRunning = !isGameRunning
-        
-
 
         if (isGameOver) {
+            score = parseInt(localStorage.getItem('score')) || 0; 
+            localStorage.setItem('score', ParseInt(textoScore.innerHTML))
             window.location.reload()
            
         }
-
-        removerCubiertaEmergente();
     }
-    Loop()
-
+        Loop()
 });
-
-
-
-
-
-
-
 
 function Init() {
     time = new Date();
@@ -338,8 +329,7 @@ var dinoPosY = nivelDelMar;
 var sueloX = 0;
 var velEscenario = 1280/3;
 var gameVel = 1;
-var score = parseInt(localStorage.getItem('score')) || 0; 
-    localStorage.setItem('score', ++score)    
+var score = 0
 
 var parado = false;
 var saltando = false;
