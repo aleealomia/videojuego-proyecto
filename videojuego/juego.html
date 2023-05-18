@@ -279,34 +279,30 @@ var isGameOver = false;
 
 if(document.readyState === "complete" || document.readyState === "interactive"){
     setTimeout(Init, 1);
-}else{
+}
+else{
     document.addEventListener("DOMContentLoaded", Init); 
 }
 
-document.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
+document.addEventListener ("keypress", function(event) {  
+    if (event.key === "Enter") { 
         isGameRunning = !isGameRunning
-        
+
         if (isGameOver) {
             score = parseInt(localStorage.getItem('score')) || 0; 
             localStorage.setItem('score', ParseInt(textoScore.innerHTML))
             window.location.reload()
            
         }
+
         console.log("nigga")
         removerCubiertaEmergente();
     }
 
     Loop()
 
+
 });
-
-
-
-
-
-
-
 
 function Init() {
     time = new Date();
