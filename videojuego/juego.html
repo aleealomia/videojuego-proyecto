@@ -49,7 +49,7 @@
   document.body.appendChild(divEmergente);
 
   let imgMensaje = document.createElement('img');
-  imgMensaje.src = "img/videojuego_instrucciones.png"; // Reemplaza 'ruta_de_la_imagen' con la ruta correcta de la imagen que deseas mostrar
+  imgMensaje.src = "img/videojuego_instrucciones.png"; 
   imgMensaje.setAttribute('id', 'imgMensaje');
   imgMensaje.setAttribute('class', 'mensaje-emergente');
 
@@ -338,8 +338,7 @@ var dinoPosY = nivelDelMar;
 var sueloX = 0;
 var velEscenario = 1280/3;
 var gameVel = 1;
-var score = parseInt(localStorage.getItem('score')) || 0; 
-    localStorage.setItem('score', ++score)    
+var score = 0; 
 
 var parado = false;
 var saltando = false;
@@ -575,13 +574,7 @@ function GameOver() {
     gameOver.style.display = "block";
     audioGameOver.play();
     isGameOver = true;
-    
-    font = pygame.font.Font(None, 36)
-text = font.render("Presiona ENTER para reiniciar", True, (255, 255, 255))
-
-
-
-
+    text = font.render("Presiona ENTER para reiniciar", true (255, 255, 255))
 
 }
 
@@ -620,7 +613,17 @@ function IsCollision(a, b, paddingTop, paddingRight, paddingBottom, paddingLeft)
     );
 }
 
-
+//document.addEventListener("keypress", function(event) {
+//    if (event.key === "Enter") {
+//        isGameRunning = !isGameRunning
+//        if(isGameOver) {
+//            score = parseInt(localStorage.getItem('score')) || 0;
+//            localStorage.setItem('score', parseInt(textoScore.innerHTML))
+//            window.location.reload()
+//        }
+//        console.log("blue")
+//    }
+//});
 
 
 </script>
